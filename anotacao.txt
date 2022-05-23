@@ -1,0 +1,30 @@
+***************** GRID *****************
+
+como saber quantas linhas virtuais eu tenho?
+
+
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 20vh 70vh 10vh;
+
+  colunas como eu indiquei DUAS, eu tenho 
+  uma linha virtual de começo, uma no meio e
+  uma no fim, ou seja tenho 3 linhas.
+
+  em ROWS eu coloquei 3 rows, entao tenho 
+  4 linhas virtuais.
+
+  sempre considere o tanto de elemento q vc tem + 1 ( até segunda ordem rsrs )
+
+Quando voce for organizar suas colunas e linhas,
+considere o valor referente ao que vc definiu, exemplo:
+
+se vc definiu grid-template-columns: 3fr 1fr; ( duas colunas )
+quando for definir que um elemento, tem que ocupar todas as colunas, faça dessa forma:
+
+grid-column: 1 / 3 ( vc ta falando aqui, comece na primeira e vá até a ultima coluna),
+mas pq eu coloquei 3? ao invez de 2?, em grid sempre se soma +1 na hora de ordenar o layout.
+
+// aqui seria sem o shorthand feito acima.
+grid-column-start: 1;
+grid-column-end: 3;
+

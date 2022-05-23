@@ -1,0 +1,50 @@
+html,body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 20vh 70vh 10vh;
+  /* 
+    Com o grid template areas
+    cada string representa uma coluna,
+    dessa forma em vez de irmos na
+    tag header e fazer grid-column: 1 / 3
+    para ocupar toda a coluna, agt apenas
+    digita uma label duas vezes ( nesse caso header )
+    e referencia essa label la na tag header,
+    poderia se chamar "h" ou qualquer outra label
+    está como header apenas para melhor entendimento
+    do que representa.
+   */
+  grid-template-areas: "header header"
+                       "main aside"
+                        "footer footer";
+}
+
+header {
+  background-color: yellow;
+  height: 100px;
+  grid-area: header;
+}
+
+main {
+  background-color: blue;
+  grid-area: main;
+}
+
+aside {
+  background-color: green;
+  grid-area: aside;
+}
+
+footer {
+  background-color: red;
+  height: 100px;
+  grid-area: footer;
+}
