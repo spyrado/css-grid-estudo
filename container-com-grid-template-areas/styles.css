@@ -31,6 +31,18 @@ html,body {
   grid-template-areas: "header header"
                        "main aside"
                         "footer footer";
+
+  /*
+    vamos supor que eu quisesse
+    que o footer ficasse só no final
+    e o começo dele ficasse em branco
+    eu faria dessa forma colocaria um ponto '.': 
+    obs: lembrando que o mesmo vale 
+    para qualquer outro. 
+  */
+  /* grid-template-areas: "header header"
+  "main aside"
+   ". footer"; */
 }
 
 header {
