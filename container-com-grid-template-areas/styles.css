@@ -21,6 +21,12 @@ html,body {
     poderia se chamar "h" ou qualquer outra label
     está como header apenas para melhor entendimento
     do que representa.
+    e o bom disso tudo, é que podemos colocar o header
+    no footer por exemplo, e o footer
+    no header, que ele vai trocar sem quebrar.
+    exemplo: footer {
+      grid-area: header;
+    }
    */
   grid-template-areas: "header header"
                        "main aside"
