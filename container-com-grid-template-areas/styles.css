@@ -35,7 +35,6 @@ html,body {
 
 header {
   background-color: yellow;
-  height: 100px;
   grid-area: header;
 }
 
@@ -51,6 +50,5 @@ aside {
 
 footer {
   background-color: red;
-  height: 100px;
   grid-area: footer;
 }
