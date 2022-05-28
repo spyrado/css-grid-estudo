@@ -28,3 +28,50 @@ mas pq eu coloquei 3? ao invez de 2?, em grid sempre se soma +1 na hora de orden
 grid-column-start: 1;
 grid-column-end: 3;
 
+========================== ALINHAMENTO ==========================
+
+-content -> alinha o CONTEUDO DENTRO DO GRID ou seja se tivermos um grid de 800px e o conteudo 
+  dentro desse grid for menor que 800px vamos conseguir alinhar com content, se for igual a 800
+  não vamos conseguir alinhar POIS o conteudo do grid é do tamanho do grid.
+
+  exemplo de grid não alinhavel por content: 
+    .container
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr); 
+
+    // se vc falar que o filho é 100% do pai, o pai n vai conseguir dar um align-content
+    .item 
+      width: 100%;
+      height: 100%;
+    estrutura:
+      div.container {
+        div.item{
+
+        }
+      }
+
+  exemplo de grid ALINHAVEL por content: 
+    .container
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr); 
+
+    // se vc falar que o filho é menor que o pai (<100%) do pai, no pai vc vai conseguir dar um align-content
+    .item 
+      width: 30%;
+      height: 30%;
+    estrutura:
+      div.container {
+        div.item{
+
+        }
+      }
+
+-items -> Voce alinha TODOS os ITEMS dentro de uma grid.
+
+-self -> Voce alinha individualmente cada item da grid.
